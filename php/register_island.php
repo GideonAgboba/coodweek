@@ -27,7 +27,7 @@ if ($age < 1) {
 	header("location: failure.php");
 } else{
 	// Sending the form to a mail
-    $to      = 'iyiolaosuagwu@gmail.com';
+    $to      = 'gideonju1738@gmail.com';
     $subject = 'Registration for:' .$firstname ." " .$lastname;
     $message_body = "Registration to ISLAND, Oracle Academy, Data Science Bootcamp for Secondary Schools \n";
     $message_body .= "Registration details: \n";
