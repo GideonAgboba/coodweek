@@ -1,15 +1,15 @@
 <?php 
 	// directories to cunter file
-// 	$dir = 'count/count_island.dat';
-// 	$get_count_value = file_get_contents($dir);
-// 	function lock(){
-// 		global $get_count_value;
-// 		if ($get_count_value >99 || $get_count_value == 100) {
-// 			echo "php/restrict.php";
-// 		}else{
-// 			echo "php/register_island.php";
-// 		}
-// 	}
+	$dir = 'count/count_island.dat';
+	$get_count_value = file_get_contents($dir);
+	function lock(){
+		global $get_count_value;
+		if ($get_count_value >99 || $get_count_value == 100) {
+			echo "php/restrict.php";
+		}else{
+			echo "php/register_island.php";
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="vendor/socicon/css/styles.css">
 	<div class="form_top_div" style="box-shadow: 0px 1px 10px #000;"><img src="assets/imgs/logowh.png"></div>
 	<div class="justify-content-center p-2 my-auto d-flex">
-	  	<form class="bg-white reg_form" method="POST" action="php/register_island.php">
+	  	<form class="bg-white reg_form" method="POST" action="<?php lock(); ?>">
 	    	<div class="tuck"></div>
 		  	<div class=" p-3">
 		  		<p class=" text-left form_title fa-2x pt-2 pb-3">Student Registration</p>
